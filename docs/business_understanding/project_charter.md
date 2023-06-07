@@ -2,7 +2,7 @@
 
 ## Nombre del Proyecto
 
-[Nombre del proyecto aquí]
+hola
 
 ## Objetivo del Proyecto
 
