@@ -63,8 +63,8 @@ Despliegue.
 ## Presupuesto
 
 | General Bugget |
-|------|---------|
 | Item | Cost (USD) |
+|------|---------|
 | Technical Staff | $ 187.824 |
 | Materials and equipment | $25.133 |
 | Technological services and tests | $15.053 | 
