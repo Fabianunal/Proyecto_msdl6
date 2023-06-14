@@ -1,7 +1,7 @@
 # Reporte de Datos
 It is patch of data.  
 scripts/data_acquisition/extract_data_train.ipynb
-(https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/extract_data_train.ipynb)
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/extract_data_train.ipynb
 
 ## Resumen general de los datos
 
