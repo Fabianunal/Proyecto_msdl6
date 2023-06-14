@@ -1,8 +1,8 @@
 # Reporte de Datos
 
 Explicacion de los datos de entrenamiento. 
-
-https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/extract_data_train.ipynb
+Para más detalles ver. 
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/MLDS1_project.ipynb)
 ## Resumen general de los datos
 
 El entrenamiento de datos tiene 1901 mediciones, estos son dos tipos, el primer tipo es un radargrama de ladmain, el segundo dato es Clutter. Cada dato es un tensor de 511 x 500, en este caso tomamos solo 100 muestras del 511, La matriz de entrenamiento tiene una dimensión de 100 X 500. 
