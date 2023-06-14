@@ -1,28 +1,31 @@
 # Reporte de Datos
-It is patch of data.  
-scripts/data_acquisition/extract_data_train.ipynb
-https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/extract_data_train.ipynb
 
+Explicacion de los datos de entrenamiento. 
+
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/extract_data_train.ipynb
 ## Resumen general de los datos
 
-En esta sección se presenta un resumen general de los datos. Se describe el número total de observaciones, variables, el tipo de variables, la presencia de valores faltantes y la distribución de las variables.
+El entrenamiento de datos tiene 1901 mediciones, estos son dos tipos, el primer tipo es un radargrama de ladmain, el segundo dato es Clutter. Cada dato es un tensor de 511 x 500, en este caso tomamos solo 100 muestras del 511, La matriz de entrenamiento tiene una dimensión de 100 X 500. 
 
 ## Resumen de calidad de los datos
 
-En esta sección se presenta un resumen de la calidad de los datos. Se describe la cantidad y porcentaje de valores faltantes, valores extremos, errores y duplicados. También se muestran las acciones tomadas para abordar estos problemas.
+La calidad de los datos, presenta una SNR bajo, lo cual significa que tiene poco ruido la señal. Son señales muy trabajables inicialmente se realiza el trabajo sobre las señales sin procesar, las señales puras montadas sobre la antena que emite y recibe la señal. 
 
 ## Variable objetivo
 
-En esta sección se describe la variable objetivo. Se muestra la distribución de la variable y se presentan gráficos que permiten entender mejor su comportamiento.
+La variable objetivo son los A-scan, lo cual son las IRF que genera el radar y contiene la informacion del objeto que se encuentra bajo tierra , debido a las señales retrodispersadas o de Scattering. Para ver mejor el tipo de pulso de las señales ver en el repositorio el sisguiente .ipynb
+
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/extract_data_train.ipynb
 
 ## Variables individuales
 
-En esta sección se presenta un análisis detallado de cada variable individual. Se muestran estadísticas descriptivas, gráficos de distribución y de relación con la variable objetivo (si aplica). Además, se describen posibles transformaciones que se pueden aplicar a la variable.
+A las variables se le puede realizar treansformaciones, con el fin de extraer caracteristicas, se trabajan dos formas de extraccion de caracteristicas la primera es por metodos estadisticos, la segunda usando MAtrixpencil o SEM el cual expresa la señales como una suma de sinoides amortiguados. Estos se llaman los polos de la señal, y las Tercera es por metodos como PCA.  
 
 ## Ranking de variables
 
-En esta sección se presenta un ranking de las variables más importantes para predecir la variable objetivo. Se utilizan técnicas como la correlación, el análisis de componentes principales (PCA) o la importancia de las variables en un modelo de aprendizaje automático.
+Las variables tienen los mismo pesos. en el procesamiento todas tiene el mismo nivel de importancia. 
 
 ## Relación entre variables explicativas y variable objetivo
 
-En esta sección se presenta un análisis de la relación entre las variables explicativas y la variable objetivo. Se utilizan gráficos como la matriz de correlación y el diagrama de dispersión para entender mejor la relación entre las variables. Además, se pueden utilizar técnicas como la regresión lineal para modelar la relación entre las variables.
+Cada B-scan es la union de los A-scan estas contiene pequeñas diferencias que se pueden observar cuando se le aplica desviaciones estandar y promedio y se comparan entre B-scan. 
+
