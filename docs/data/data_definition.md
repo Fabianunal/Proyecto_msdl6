@@ -12,7 +12,8 @@ Como es conocido la exploración con tegnologias GPR busca describir a traves de
 
 ## Especificación de los scripts para la carga de datos
 
-- [ ] Especificar los scripts utilizados para la carga de los datos. 
+- [ ] Especificar los scripts utilizados para la carga de los datos.
+En el siguiente
 
 ## Referencias a rutas o bases de datos origen y destino
 
