@@ -1,7 +1,7 @@
 # Reporte de Datos
-It is patch of data.
+It is patch of data.  
 scripts/data_acquisition/extract_data_train.ipynb
-
+<p><a href="[https://silicodevalley.com](https://github.com/Fabianunal/Proyecto_msdl6/edit/master/docs/data/data_summary.md)" target="_blank">Este enlace</a> es un hipervínculo absoluto (externo).</p>
 
 ## Resumen general de los datos
 
