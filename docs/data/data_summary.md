@@ -27,5 +27,8 @@ Las variables tienen los mismo pesos. en el procesamiento todas tiene el mismo n
 
 ## Relación entre variables explicativas y variable objetivo
 
-Cada B-scan es la union de los A-scan estas contiene pequeñas diferencias que se pueden observar cuando se le aplica desviaciones estandar y promedio y se comparan entre B-scan. 
+Cada B-scan es la union de los A-scan estas contiene pequeñas diferencias que se pueden observar cuando se le aplica desviaciones estandar y promedio y se comparan entre B-scan. Para ver una analisis mas detallado del analisis de los datos ver el .ipynb del repositorio 
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/data_acquisition/MLDS1_project.ipynb 
+
+
 
