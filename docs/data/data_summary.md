@@ -1,6 +1,7 @@
 # Reporte de Datos
+It is patch of data.
+scripts/data_acquisition/extract_data_train.ipynb
 
-Este documento contiene los resultados del análisis exploratorio de datos.
 
 ## Resumen general de los datos
 
