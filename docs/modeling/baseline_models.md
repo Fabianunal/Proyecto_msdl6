@@ -9,7 +9,7 @@ Se utilizaran los tres tipos de extraccion de caracteristicas y se evaluaran dep
 ### Extraccion de caracteristicas usando herramientas estadisticas. 
 Esta extraccion se realizará sobre los 100 datos pero se hace un pequeño recorte a 60 dato con el fin de reduccir la dimensionalidad, luego se realizan la extraccion de las siguientes caracteristicas  mediante metodos estadisticos como el promedio, la desviación estandar, kurtosis y se alinean en un solo vector de 360 datos, dejando la matriz de cada elemento que antes era de 100 x 500 ahora en un solo vector. Para ver con más detalle esta extracción de caracteristicas  ver el archivo del repositorio que se encuentra en 
 
-https://github.com/Fabianunal/Proyecto_msdl6/tree/master/scripts/preprocessing
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/preprocessing/statistical_approach_feature_extraction.py
 
 ### Extraccion de caracteristicas usando Matrix Pencil SEM
 Esta extracción de caracteristicas no es muy común y es innovadora la cual se trata de extraer caracteristicas de una señal analizando las componentes en un plano complejo, osea extraer polos, los cual recontruyen la señal con una suma de senoides amortiguados, se extraen 16 polos de cada A-scan lo cual genera una matriz de 16 X 500 frame el cual hace una reduccion considerable de tamaño. al reconstruir la señal con estos polos nos da una exactitud del 99.7%. 
@@ -36,12 +36,14 @@ El modelo se evaluara mediante un RandomForestClassifier con datos balanceados y
 Las metricas de evaluación seran el accuracy que genere un modelo con los mismo hiperparametros, en este caso se utiliza el radomforest. 
 
 ### Resultados de evaluación
-Script de trainig usando matrix pencil
+Script de training usando statistical approach
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/preprocessing/ml_feature_extraction_models.py
+Script de training usando matrix pencil
 https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/training/training_matrix_pencil.py
 
 | Caracteristica | tamaño Tensor |   Accuracy |
 |------|---------|-------|
-| Features usando estadistica | 1901 x 360| |
+| Features usando estadistica | 1901 x 480| | 0.9649 |
 | Features usando Matrix Pencil | 1901 x 8000 |  0.9071 |
 
 
