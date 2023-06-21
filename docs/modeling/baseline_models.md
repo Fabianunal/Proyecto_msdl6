@@ -13,17 +13,22 @@ https://github.com/Fabianunal/Proyecto_msdl6/tree/master/scripts/preprocessing
 
 # Extraccion de caracteristicas usando Matrix Pencil SEM
 Esta extracción de caracteristicas no es muy común y es innovadora la cual se trata de extraer caracteristicas de una señal analizando las componentes en un plano complejo, osea extraer polos, los cual recontruyen la señal con una suma de senoides amortiguados, se extraen 16 polos de cada A-scan lo cual genera una matriz de 16 X 500 frame el cual hace una reduccion considerable de tamaño. al reconstruir la señal con estos polos nos da una exactitud del 99.7%. 
-La extracción se encuentra en el siguiente codigo del repositorio. 
+La extracción se encuentra en el siguiente codigo del repositorio donde explica de forma mas detalla este metodo de extracción de caracteristias. 
+
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/preprocessing/extract_poles_data.py 
+
 
 ## Variables de entrada
 
-LAs variables de entrada son las señales de los A-scan por 500 frames, lo cual constituye un radargrama. Estos A-scan inicialmente tiene un tamaño de 511 pero se reduccen a 100 datos. 
-
+LAs variables de entrada son las señales de los A-scan por 500 frames, lo cual constituye un radargrama. Estos A-scan inicialmente tiene un tamaño de 511 pero se reduccen a 100 datos. se tienen 1901 datos el cual contituyr un tensor de entrada de 1901 X 100 X 500 donde 1455 son IEDs y 446 son Clutter, hasta el momento el sistema nos esta muy balanceado por esa razón se usa Random Forest ya que este modelo permite balancear los datos. 
+ 
 ## Variable objetivo
 
 La variable objetivo son los features estos deben ser un vector de menor tamaño. Por la reducción de dimensionalidad. 
 
 ## Evaluación del modelo
+Se deviden los datos en 70% y 30% para entrenamiento y para prueba respectivamente. 
+
 El modelo se evaluara mediante un RandomForestClassifier con datos balanceados y con una semilla de 2. 
 
 ### Métricas de evaluación
@@ -31,17 +36,31 @@ El modelo se evaluara mediante un RandomForestClassifier con datos balanceados y
 Las metricas de evaluación seran el accuracy que genere un modelo con los mismo hiperparametros, en este caso se utiliza el radomforest. 
 
 ### Resultados de evaluación
+Script de trainig usando matrix pencil
+https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/training/training_matrix_pencil.py
 
-Tabla que muestra los resultados de evaluación del modelo baseline, incluyendo las métricas de evaluación.
+| Caracteristica | tamaño Tensor |   Accuracy |
+|------|---------|-------|
+| Features usando estadistica | 1901 x 360| |
+| Features usando Matrix Pencil | 1901 x 8000 |  0.9071 |
+
 
 ## Análisis de los resultados
+# Usando herramientas estadisticas
+Usando esta herramienta el vector de entranamiento final es muy corto a compracion del inicial, y permite no siempre tener los 500 frames, el cual tiene una gran ventaja en mediciones en campo donde no se logren los 500 data frames. Además las extracciones son muy rapidas para todo el data Set. 
 
-Descripción de los resultados del modelo baseline, incluyendo fortalezas y debilidades del modelo.
+# Usando Matrix Pencil SEM
+Es una herramienta innovadora para extraer caracteristicas, una desventaja es que esta limitada a los 500 frames y el modelo se entrena teniendo encuenta la cantifdad de frame, y si no tiene esa cantidad de frames, el modelo no se podria aplicar, ademas extraer las caracteristicas de cada A-scan es muy demorado, para este data set se demora unas 4 horas aproximadamente. El accuracy no es muy alto. 
 
 ## Conclusiones
 
-Conclusiones generales sobre el rendimiento del modelo baseline y posibles áreas de mejora.
+El metodo de Matrix pencil es innovador pero es muy practico por el coste computacional y por los resultados finales, cabe recalcar que se puede hacer mejores optimizaciones al modelo, pero frente a los modelos estadisticos inicialmente es inferior. 
+
+La extracción por metodos estadisticos es muy bueno, y realmente tiene muy bueno resultados a pesar de su simplicidad. 
 
 ## Referencias
+
+E. F. Ruiz, D. Chaparro-Arce, J. J. Pantoja, F. Vega, C. Kasmi and F. Al Yafei, "Ground Penetrating Radar Radargram Filter using Singularity Expansion Method," 2020 International Applied Computational Electromagnetics Society Symposium (ACES), Monterey, CA, USA, 2020, pp. 1-2, doi: 10.23919/ACES49320.2020.9196132
+
 
 
