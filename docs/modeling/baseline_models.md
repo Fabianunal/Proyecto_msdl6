@@ -44,7 +44,7 @@ https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/training/traini
 
 | Caracteristica | tamaño Tensor |   Accuracy |
 |------|---------|-------|
-| Features usando estadistica | 1901 x 480| | 0.9649 |
+| Features usando estadistica | 1901 x 480 |  0.9649 |
 | Features usando Matrix Pencil | 1901 x 8000 |  0.9071 |
 
 
