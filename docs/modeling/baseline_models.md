@@ -37,8 +37,8 @@ Las metricas de evaluación seran el accuracy que genere un modelo con los mismo
 
 ### Resultados de evaluación
 Script de training usando statistical approach
-
 https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/preprocessing/ml_feature_extraction_models.py
+
 Script de training usando matrix pencil
 https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/training/training_matrix_pencil.py
 
