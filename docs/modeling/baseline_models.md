@@ -6,12 +6,12 @@ Este documento contiene los resultados del modelo baseline. Se utilizaran varios
 
 Se utilizaran los tres tipos de extraccion de caracteristicas y se evaluaran dependiendo de su rendimiento a la hora de entrenar. La extraccion de carácteristicas se genera apartir de los A-scan generados por el radar GPR-UWB para esto se toma una parte de la señal donde se observa una variacion evidente del elemento enterrado, entonces cada radargrama tendra un tamaño de 100 x 500 frame donde los 100 datos son la sección donde está contenida la información mas relevante. 
 
-# Extraccion de caracteristicas usando herramientas estadisticas. 
+### Extraccion de caracteristicas usando herramientas estadisticas. 
 Esta extraccion se realizará sobre los 100 datos pero se hace un pequeño recorte a 60 dato con el fin de reduccir la dimensionalidad, luego se realizan la extraccion de las siguientes caracteristicas  mediante metodos estadisticos como el promedio, la desviación estandar, kurtosis y se alinean en un solo vector de 360 datos, dejando la matriz de cada elemento que antes era de 100 x 500 ahora en un solo vector. Para ver con más detalle esta extracción de caracteristicas  ver el archivo del repositorio que se encuentra en 
 
 https://github.com/Fabianunal/Proyecto_msdl6/tree/master/scripts/preprocessing
 
-# Extraccion de caracteristicas usando Matrix Pencil SEM
+### Extraccion de caracteristicas usando Matrix Pencil SEM
 Esta extracción de caracteristicas no es muy común y es innovadora la cual se trata de extraer caracteristicas de una señal analizando las componentes en un plano complejo, osea extraer polos, los cual recontruyen la señal con una suma de senoides amortiguados, se extraen 16 polos de cada A-scan lo cual genera una matriz de 16 X 500 frame el cual hace una reduccion considerable de tamaño. al reconstruir la señal con estos polos nos da una exactitud del 99.7%. 
 La extracción se encuentra en el siguiente codigo del repositorio donde explica de forma mas detalla este metodo de extracción de caracteristias. 
 
@@ -46,10 +46,10 @@ https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/training/traini
 
 
 ## Análisis de los resultados
-# Usando herramientas estadisticas
+### Usando herramientas estadisticas
 Usando esta herramienta el vector de entranamiento final es muy corto a compracion del inicial, y permite no siempre tener los 500 frames, el cual tiene una gran ventaja en mediciones en campo donde no se logren los 500 data frames. Además las extracciones son muy rapidas para todo el data Set. 
 
-# Usando Matrix Pencil SEM
+### Usando Matrix Pencil SEM
 Es una herramienta innovadora para extraer caracteristicas, una desventaja es que esta limitada a los 500 frames y el modelo se entrena teniendo encuenta la cantifdad de frame, y si no tiene esa cantidad de frames, el modelo no se podria aplicar, ademas extraer las caracteristicas de cada A-scan es muy demorado, para este data set se demora unas 4 horas aproximadamente. El accuracy no es muy alto. 
 
 ## Conclusiones
