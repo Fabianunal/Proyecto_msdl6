@@ -11,7 +11,7 @@
     -Hardware: CPU: Intel Core i7-8750H 2.20 GHz, GPU NVIDIA Gforce 1050, RAM 32 GB
 - **Requisitos de seguridad:** no se requiere
 - **Diagrama de arquitectura:** 
-
+![Texto alternativo](URL_de_la_imagen)
 ## Código de despliegue
 
 - **Archivo principal:** (nombre del archivo principal que contiene el código de despliegue)
