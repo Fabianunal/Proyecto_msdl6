@@ -20,7 +20,17 @@
 
 ## Documentación del despliegue
 
-- **Instrucciones de instalación:** (instrucciones detalladas para instalar el modelo en la plataforma de despliegue)
-- **Instrucciones de configuración:** (instrucciones detalladas para configurar el modelo en la plataforma de despliegue)
-- **Instrucciones de uso:** (instrucciones detalladas para utilizar el modelo en la plataforma de despliegue)
-- **Instrucciones de mantenimiento:** (instrucciones detalladas para mantener el modelo en la plataforma de despliegue)
+- **Instrucciones de instalación:** El proceso de instalación para desplegar un modelo de Machine Learning en FastAPI se utilizan los siguientes pasos:
+- Clona el repositorio de GitHub
+- Crea y activa un entorno virtual
+- Instala las dependencias necesarias
+- Descarga los archivos del modelo
+- Configura FastAPI usa un archivo main.py y define tu aplicación FastAPI. Puedes usar el siguiente código como punto de partida
+- Inicia el servidor FastAPI
+- 
+- **Instrucciones de configuración:**
+- Los datos son un vector que previamente se a realizado el proceso de estracción de caracteristicas.
+  
+- **Instrucciones de uso:** Estas se finalizaran cuando el midelo se entregue por completo.
+  
+- **Instrucciones de mantenimiento:** Por ahora no aplica. 
