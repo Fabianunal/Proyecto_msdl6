@@ -14,7 +14,7 @@
 ![Texto alternativo](https://github.com/Fabianunal/Proyecto_msdl6/blob/master/docs/deployment/Arq.PNG)
 ## Código de despliegue
 
-- **Archivo principal:** DyploimentAPI.py
+- **Archivo principal:** DeploymentAPI.py
 - **Rutas de acceso a los archivos:** https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/Deployment/deploymentapi.py, https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/Deployment/main.py, https://github.com/Fabianunal/Proyecto_msdl6/tree/master/scripts/Deployment
 
 
