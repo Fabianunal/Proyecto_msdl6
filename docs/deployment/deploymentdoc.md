@@ -14,9 +14,9 @@
 ![Texto alternativo](https://github.com/Fabianunal/Proyecto_msdl6/blob/master/docs/deployment/Arq.PNG)
 ## Código de despliegue
 
-- **Archivo principal:** (nombre del archivo principal que contiene el código de despliegue)
-- **Rutas de acceso a los archivos:** (lista de rutas de acceso a los archivos necesarios para el despliegue)
-- **Variables de entorno:** (lista de variables de entorno necesarias para el despliegue)
+- **Archivo principal:** DyploimentAPI.py
+- **Rutas de acceso a los archivos:** https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/Deployment/deploymentapi.py, https://github.com/Fabianunal/Proyecto_msdl6/blob/master/scripts/Deployment/main.py, https://github.com/Fabianunal/Proyecto_msdl6/tree/master/scripts/Deployment
+
 
 ## Documentación del despliegue
 
