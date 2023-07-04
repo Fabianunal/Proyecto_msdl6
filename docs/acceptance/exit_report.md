@@ -14,6 +14,14 @@ omo es conocido la exploración con tegnologias GPR busca describir a traves de 
 ## Resultados del proyecto
 
 - Resumen de los entregables y logros alcanzados en cada etapa del proyecto.
+  
+Entedimiento del negocio: En esta etapa se realiza un estudio del estado del arte con el proposito de comprender todos los fenomenos EM que se presentan al realizar medidas con un sistema GPR. Ademas, las diferentes tecnicas de adquisición de datos GPR en busca de obtener imagenes mas claras y con menor clutter.
+
+Preprocesamiento y analisis exploratorio de los datos: En esta etapa se decide tomar los datos crudos obtenidos por el sistema GPR, pero para poder trabajar con estos datos se requiere una extracción de la información de interes de un archivo *mat, el cual cuenta con mayor informacion denominada metadata. La extracción de las medidas se realiza mediante un codigo desarrollado en python. Posterior a la extracción, se hace un analisis exploratorio de los datos mediante la construcción de los B-scan al apilar los 500 A-scan que cosntruyen la imagen de radar. En este proceso se determina la calidad de los datos.
+
+Modelamiento y extracción de caracteristicas: En esta etapa se recurre a dos metodologias diferentes para realizar la extracción de caracteristicas:
+
+1) Aproximación estadistica: Se realiza las extración de caracteristicas mediante el uso de seis parametros estadisticos    
 - Evaluación del modelo final y comparación con el modelo base.
 - Descripción de los resultados y su relevancia para el negocio.
 
