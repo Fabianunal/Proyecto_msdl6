@@ -21,8 +21,14 @@ Preprocesamiento y analisis exploratorio de los datos: En esta etapa se decide t
 
 Modelamiento y extracción de caracteristicas: En esta etapa se recurre a dos metodologias diferentes para realizar la extracción de caracteristicas:
 
-1) Aproximación estadistica: Se realiza las extración de caracteristicas mediante el uso de seis parametros estadisticos    
+1) Aproximación estadistica: Se realiza las extración de caracteristicas de cada A-scan mediante el uso de parametros estadisticos con el cual se construye un vector de caracteristicas para ser usado como los datos entrenamiento y evaluación del modelo de ML random forest.
+2) SEM-Matrix pencil: Se extrae caracteristicas usando Matrix pencil como metodo de expansion. Ete metodo se encarga de extraer los polos mas significativos de cada A-scan, con estos polos se construye un vector de caracteristicas para ser usado como los datos de entrenamiento y evaluación del modelo de ML random forest.
+
+Despliegue: Se despliega el modelo con mayor desempeño con el uso de FastAPI.
+
 - Evaluación del modelo final y comparación con el modelo base.
+
+
 - Descripción de los resultados y su relevancia para el negocio.
 
 ## Lecciones aprendidas
